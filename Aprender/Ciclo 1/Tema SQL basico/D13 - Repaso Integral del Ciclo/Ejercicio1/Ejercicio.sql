@@ -1,0 +1,21 @@
+-- ============================================
+-- EJERCICIO 1: Crear Base de Datos y Tabla (D1 + D2 + D3)
+-- ============================================
+-- Enunciado: Ya ejecutaste Inicio.sql y tienes la base de datos
+-- Tienda con la tabla Productos. Ahora:
+--
+-- 1) Verifica que estás conectado a la base de datos Tienda
+--    (usa USE Tienda).
+-- 2) Muestra todas las columnas de la tabla Productos con
+--    SELECT *.
+-- 3) Agrega una nueva tabla llamada Categorias con las columnas:
+--    - id_Categoria INT
+--    - nombre VARCHAR(50)
+-- 4) Muestra la tabla Categorias vacía con SELECT *.
+--
+-- Salida esperada:
+--   - SELECT * FROM Productos → tabla vacía (0 filas)
+--   - SELECT * FROM Categorias → tabla vacía (0 filas)
+-- ============================================
+
+-- Tu código aquí...

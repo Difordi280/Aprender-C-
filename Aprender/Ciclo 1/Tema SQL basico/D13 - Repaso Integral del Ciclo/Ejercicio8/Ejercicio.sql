@@ -1,0 +1,25 @@
+-- ============================================
+-- EJERCICIO 8: AND, OR y LIKE (D12)
+-- ============================================
+-- Enunciado: Ya ejecutaste Inicio.sql y tienes la tabla Empleados
+-- con 7 empleados. Ahora:
+--
+-- 1) Muestra los empleados que ganan más de 4500 Y viven en Bogotá
+--    (AND).
+-- 2) Muestra los empleados que viven en Cali O en Medellín (OR).
+-- 3) Muestra los empleados cuyo nombre empieza con 'J' (LIKE 'J%').
+-- 4) Muestra los empleados cuyo apellido termina con 'z' (LIKE '%z').
+-- 5) Muestra los empleados que viven en Bogotá O en Cali, Y que
+--    ganan más de 4000 (combina OR con AND usando paréntesis).
+-- 6) Muestra los empleados cuyo nombre contiene 'a' (LIKE '%a%').
+--
+-- Salida esperada:
+--   - AND: Juan (5000, Bogotá), Pedro (5500, Bogotá), Jorge (6000, Bogotá)
+--   - OR: Ana (Cali), Carlos (Medellín), Lucía (Cali), María (Medellín)
+--   - LIKE 'J%': Juan, Jorge
+--   - LIKE '%z': Pérez, Martínez, Ruiz
+--   - OR + AND: Juan, Pedro, Ana, Jorge
+--   - LIKE '%a%': Juan, María, Ana, Carlos, Lucía
+-- ============================================
+
+-- Tu código aquí...

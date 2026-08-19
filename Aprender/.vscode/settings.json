@@ -1,0 +1,34 @@
+{
+  "dotnet.defaultSolution": "disable",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "terminal.integrated.defaultLocation": "view",
+  "workbench.colorTheme": "Dark 2026",
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "csharp": true
+  },
+  "tabnine.inlineSuggest": true,
+  "tabnine.showStatusBarItem": "always",
+  "tabnine.autoImports": true,
+  "tabnine.disableLanguage": [],
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggest.showWords": true,
+  "editor.wordBasedSuggestions": "currentDocument",
+  "editor.suggestSelection": "first",
+  "editor.parameterHints.enabled": true,
+  "editor.hover.enabled": "on",
+  "csharp.suppressHiddenDiagnostics": false,
+  "omnisharp.enableRoslynAnalyzers": true,
+  "omnisharp.useModernNet": true,
+  "github.copilot.editor.enableCodeActions": false
+}

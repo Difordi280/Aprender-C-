@@ -1,0 +1,7 @@
+[
+  {
+    "key": "ctrl+alt+space",
+    "command": "github.copilot.chat.openSuggestionsPanel",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+]

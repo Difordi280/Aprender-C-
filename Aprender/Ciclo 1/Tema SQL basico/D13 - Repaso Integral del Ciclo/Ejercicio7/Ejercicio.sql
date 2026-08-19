@@ -1,0 +1,25 @@
+-- ============================================
+-- EJERCICIO 7: Filtrado con WHERE (D11)
+-- ============================================
+-- Enunciado: Ya ejecutaste Inicio.sql y tienes la tabla Empleados
+-- con 5 empleados. Ahora:
+--
+-- 1) Muestra solo el empleado con id_Empleado = 3.
+-- 2) Muestra los empleados con salario > 4500.
+-- 3) Muestra los empleados con salario < 5000.
+-- 4) Muestra los empleados que NO son de Bogotá (ciudad <> 'Bogotá').
+-- 5) Actualiza el salario del empleado con id_Empleado = 2 a 6000.
+-- 6) Elimina solo al empleado con id_Empleado = 5.
+-- 7) Muestra la tabla completa con SELECT * para verificar.
+--
+-- Salida esperada:
+--   - id_Empleado = 3 → 1 fila (Pedro)
+--   - salario > 4500 → Juan (5000), Pedro (5500), Ana (4800)
+--   - salario < 5000 → María (4500), Ana (4800), Carlos (4200)
+--   - ciudad <> 'Bogotá' → María, Ana, Carlos
+--   - Después del UPDATE: María tiene salario 6000
+--   - Después del DELETE: Carlos ya no existe
+--   - SELECT * final → 4 filas
+-- ============================================
+
+-- Tu código aquí...

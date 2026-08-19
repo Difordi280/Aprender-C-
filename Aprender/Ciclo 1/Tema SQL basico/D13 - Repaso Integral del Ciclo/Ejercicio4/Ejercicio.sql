@@ -1,0 +1,32 @@
+-- ============================================
+-- EJERCICIO 4: Insertar Registros (D8)
+-- ============================================
+-- Enunciado: Ya ejecutaste Inicio.sql y tienes la tabla Productos
+-- VACÍA con las columnas: id_Producto, nombre, precio, stock.
+-- Ahora:
+--
+-- 1) Inserta 5 productos usando INSERT INTO. Respeta el orden
+--    y el tipo de dato de las columnas:
+--    - id_Producto INT
+--    - nombre VARCHAR(50)
+--    - precio DECIMAL(10,2)
+--    - stock INT
+--
+--    Productos a insertar:
+--    (1, 'Laptop', 1200.00, 10)
+--    (2, 'Mouse', 50.00, 50)
+--    (3, 'Teclado', 80.00, 30)
+--    (4, 'Monitor', 300.00, 15)
+--    (5, 'Impresora', 250.00, 8)
+--
+-- 2) Muestra todos los productos con SELECT *.
+--
+-- 3) Intenta insertar un producto con texto en la columna precio
+--    (ej: 'caro'). Esto DEBE fallar porque precio es DECIMAL.
+--
+-- Salida esperada:
+--   - SELECT * muestra 5 productos
+--   - El intento de insertar texto en precio genera un error
+-- ============================================
+
+-- Tu código aquí...

@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Ejecutar archivo C# actual",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\debug-current-file.ps1",
+        "-FilePath",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Ejecutar SQL Runner",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\sql-runner.ps1"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": []
+    }
+  ]
+}

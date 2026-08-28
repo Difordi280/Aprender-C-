@@ -18,12 +18,33 @@
 --    (3, 'Teclado', 80.00, 30)
 --    (4, 'Monitor', 300.00, 15)
 --    (5, 'Impresora', 250.00, 8)
+USE Tienda;
+
+GO
+
+INSERT INTO Productos (id_Producto, nombre, precio ,stock)
+VALUES  (1, 'Laptop', 1200.00, 10),
+        (2, 'Mouse', 50.00, 50),
+        (3, 'Teclado', 80.00, 30),
+        (4, 'Monitor', 300.00, 15),
+        (5, 'Impresora', 250.00, 8);
+
+
 --
 -- 2) Muestra todos los productos con SELECT *.
 --
+
+SELECT * FROM Productos;
+
+
 -- 3) Intenta insertar un producto con texto en la columna precio
 --    (ej: 'caro'). Esto DEBE fallar porque precio es DECIMAL.
 --
+
+-- INSERT INTO Productos(id_Producto,nombre,precio,stock)
+-- VALUES  (6, 'Tablet', 'caro', 20)
+
+
 -- Salida esperada:
 --   - SELECT * muestra 5 productos
 --   - El intento de insertar texto en precio genera un error

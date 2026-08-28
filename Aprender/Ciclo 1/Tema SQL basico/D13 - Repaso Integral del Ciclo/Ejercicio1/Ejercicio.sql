@@ -19,3 +19,15 @@
 -- ============================================
 
 -- Tu código aquí...
+
+Use Tienda;
+
+SELECT * FROM Productos;
+
+CREATE TABLE Categorias(
+    id_Categoria INT,
+    nombre VARCHAR(50)
+
+);
+
+SELECT * FROM Categorias;

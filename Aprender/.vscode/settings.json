@@ -11,7 +11,7 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "csharp": true
+    "csharp": false
   },
   "tabnine.inlineSuggest": true,
   "tabnine.showStatusBarItem": "always",

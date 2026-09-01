@@ -22,6 +22,8 @@
 // MODELOS DE DATOS
 // ============================================
 
+using System.Security.Cryptography.X509Certificates;
+
 public class Permiso
 {
     public int Id { get; set; }
@@ -183,6 +185,8 @@ public class DatosPrueba
     }
 }
 
+
+
 // ============================================
 // EJERCICIO 1: Listas con Objetos Anidados (D1)
 // ============================================
@@ -212,6 +216,25 @@ public class Ejercicio1_ListasAnidadas
         Console.WriteLine("=== EJERCICIO 1: Listas con Objetos Anidados (D1) ===");
         
         // Tu código aquí...
+        var   permisos = usuarios.Select(x=> new
+        {
+            x.Nombre,
+            permisos = x.Permisos.Select(y=> y.Nombre).ToList()
+
+
+        });
+
+
+        foreach (var usuario in permisos)
+        {
+            Console.WriteLine($"{usuario.Nombre}:");
+            foreach (var permiso in usuario.permisos)
+            {
+                Console.WriteLine($"  - {permiso}");
+            }
+        }
+
+
 
         Console.WriteLine();
     }
@@ -242,6 +265,20 @@ public class Ejercicio2_SelectManyPermisos
         Console.WriteLine("=== EJERCICIO 2: SelectMany y Listas Planas (D2) ===");
         
         // Tu código aquí...
+        var permisos = usuarios.SelectMany(x=>
+            
+                x.Permisos.Select(k=> new
+                {
+                    x.Nombre,
+                    permiso = k.Nombre 
+
+                })
+            );
+
+        foreach (var per in permisos)
+        {
+            Console.WriteLine($"{per.Nombre} - {per.permiso}");
+        }
 
         Console.WriteLine();
     }
@@ -274,6 +311,22 @@ public class Ejercicio3_JoinProductosCategorias
         Console.WriteLine("=== EJERCICIO 3: Join de Colecciones (D3) ===");
         
         // Tu código aquí...
+        var fusion = productos.Join(categorias,
+            a => a.CategoriaId,
+            b => b.Id,
+            (a, b) => new {
+
+               a.Nombre,
+               a.Precio,
+               categoria= b.Nombre
+               
+
+            });
+
+        foreach (var item in fusion)
+        {
+            Console.WriteLine($"{item.Nombre} (${item.Precio}) - {item.categoria}");
+        }
 
         Console.WriteLine();
     }
@@ -308,6 +361,38 @@ public class Ejercicio4_GroupJoinClientesFacturas
         Console.WriteLine("=== EJERCICIO 4: GroupJoin y Estructura de Árbol (D4) ===");
         
         // Tu código aquí...
+        var fusion = clientes.GroupJoin(facturas,
+            origen => origen.Id,
+            destino => destino.ClienteId,
+            (origen, coincidencias) => new {
+                
+                origen.Nombre,
+                facturacion=coincidencias.Select(x=> new
+                {
+                    
+                    num=x.Id,
+                    monto=x.Monto
+                })
+
+            });
+
+        foreach (var cliente in fusion)
+        {
+            Console.WriteLine($"{cliente.Nombre}:");
+            if (cliente.facturacion.Any())
+            {
+                foreach (var factura in cliente.facturacion)
+                {
+                    Console.WriteLine($"  - Factura {factura.num}: ${factura.monto}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("  - Sin facturas");
+            }
+        }
+
+
 
         Console.WriteLine();
     }
@@ -347,6 +432,27 @@ public class Ejercicio5_AlgebraConjuntos
         Console.WriteLine("=== EJERCICIO 5: Álgebra de Conjuntos (D5) ===");
         
         // Tu código aquí...
+        var interseccion =  bogota.Intersect(ti);
+
+        var exepcion = bogota.Except(ti);
+
+        var unio = bogota.Union(ti);
+
+        Console.WriteLine("Solo en Bogotá (Except):");
+        foreach (var item in exepcion)
+        {
+            Console.WriteLine($"Solo en Bogotá (Except): {item}");
+        }
+        Console.WriteLine("En ambas listas (Intersect):");
+        foreach (var item in interseccion)
+        {
+            Console.WriteLine($"En ambas listas (Intersect): {item}");
+        }   
+        Console.WriteLine("Unión sin duplicados (Union):");
+        foreach (var item in unio)
+        {
+            Console.WriteLine($"Unión sin duplicados (Union): {item}");
+        }
 
         Console.WriteLine();
     }
@@ -379,6 +485,14 @@ public class Ejercicio6_OrdenamientoCompuesto
         Console.WriteLine("=== EJERCICIO 6: Ordenamiento con ThenBy (D8 + D9) ===");
         
         // Tu código aquí...
+        var ordenar = empleados.OrderBy(c=> c.Sucursal)
+            .ThenBy(c=> c.Apellido)
+            .ThenBy(c=> c.Edad);
+
+        foreach (var empleado in ordenar)
+        {
+            Console.WriteLine($"{empleado.Nombre} {empleado.Apellido} - {empleado.Sucursal} ({empleado.Edad} años)");
+        }
 
         Console.WriteLine();
     }
@@ -409,6 +523,27 @@ public class Ejercicio7_GroupByReporte
         Console.WriteLine("=== EJERCICIO 7: GroupBy + Reporte Resumido (D10 + D11) ===");
         
         // Tu código aquí...
+        var Agrupa=  productos.Join(categorias,
+            a => a.CategoriaId,
+            b => b.Id,
+            (a, b) => new {
+
+                a.Nombre,
+                categoria =b.Nombre,
+                precio = a.Precio
+            })
+            .GroupBy(c=> c.categoria)
+            .Select(x=> new
+            {
+                categorias=x.Key,
+                cantidad= x.Count(),
+                total = x.Sum(a=> a.precio)  
+            });
+
+        foreach (var item in Agrupa)
+        {
+            Console.WriteLine($"{item.categorias}: {item.cantidad} productos, Total: ${item.total}");
+        }
 
         Console.WriteLine();
     }
@@ -441,6 +576,22 @@ public class Ejercicio8_GroupByMultipleOrden
         Console.WriteLine("=== EJERCICIO 8: GroupBy Múltiple + Orden (D12 + D8 + D9) ===");
         
         // Tu código aquí...
+        var  agrupar = empleados.GroupBy(x=> new{
+                x.Sucursal,
+                x.Departamento
+            })
+            .Select(g=> new
+            {
+                g.Key.Departamento,
+                g.Key.Sucursal,
+                cantidad = g.Count(),
+                total = g.Sum(c=> c.Salario)
+            });
+
+        foreach (var item in agrupar.OrderBy(x=> x.Sucursal).ThenByDescending(x=> x.total))
+        {
+            Console.WriteLine($"{item.Sucursal} - {item.Departamento}: {item.cantidad} empleados, Total: ${item.total}");
+        }
 
         Console.WriteLine();
     }

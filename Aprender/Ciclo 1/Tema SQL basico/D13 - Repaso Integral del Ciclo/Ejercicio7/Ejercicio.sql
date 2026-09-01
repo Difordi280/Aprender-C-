@@ -5,12 +5,33 @@
 -- con 5 empleados. Ahora:
 --
 -- 1) Muestra solo el empleado con id_Empleado = 3.
+
+USE Empresa;
+
+SELECT * FROM Empleados WHERE( id_Empleado = 3 );
+
 -- 2) Muestra los empleados con salario > 4500.
+
+SELECT * FROM Empleados WHERE (salario > 4500);
+
 -- 3) Muestra los empleados con salario < 5000.
+
+SELECT * FROM Empleados WHERE (salario < 5000);
+
 -- 4) Muestra los empleados que NO son de Bogotá (ciudad <> 'Bogotá').
+
+SELECT * FROM Empleados WHERE (ciudad <> 'Bogotá');
+
 -- 5) Actualiza el salario del empleado con id_Empleado = 2 a 6000.
+UPDATE Empleados SET salario= 6000 WHERE (id_Empleado = 2);
+
 -- 6) Elimina solo al empleado con id_Empleado = 5.
+DELETE  FROM Empleados WHERE (id_Empleado = 5);
+
 -- 7) Muestra la tabla completa con SELECT * para verificar.
+
+SELECT * FROM Empleados;
+
 --
 -- Salida esperada:
 --   - id_Empleado = 3 → 1 fila (Pedro)

@@ -1,0 +1,11 @@
+-- D2 - 8 ejercicios
+USE C2D2;
+-- 1. Lista categorías y productos.
+-- 2. Inserta un producto válido.
+-- 3. Intenta usar IdCategoria = 999 y observa el error.
+-- 4. Intenta borrar una categoría con productos.
+-- 5. Cuenta productos por categoría.
+-- 6. Consulta las FKs en sys.foreign_keys.
+-- 7. Crea una tabla Marcas y relaciónala con Productos.
+-- 8. Explica qué registro huérfano impediría la FK.
+-- Tu código aquí...

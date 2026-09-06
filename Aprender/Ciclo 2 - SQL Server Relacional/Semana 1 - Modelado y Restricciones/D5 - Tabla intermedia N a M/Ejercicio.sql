@@ -1,0 +1,11 @@
+-- D5 - 8 ejercicios
+USE C2D5;
+-- 1. Lista las tres tablas.
+-- 2. Inscribe a Mateo en LINQ.
+-- 3. Repite una inscripción y observa la PK compuesta.
+-- 4. Usa una FK inexistente y observa el error.
+-- 5. Consulta estudiantes con sus cursos usando dos JOIN.
+-- 6. Cuenta cursos por estudiante.
+-- 7. Cuenta estudiantes por curso.
+-- 8. Diseña una relación N:M entre Autores y Libros.
+-- Tu código aquí...

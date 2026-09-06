@@ -1,4 +1,4 @@
-{
+﻿{
   "version": "2.0.0",
   "tasks": [
     {
@@ -37,6 +37,21 @@
       "group": {
         "kind": "build",
         "isDefault": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "ASP: Preparar terminal (cd automÃ¡tico)",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -NoExit -File \"${workspaceFolder}\\.vscode\\preparar-terminal-asp.ps1\" -FilePath \"${file}\"",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "new",
+        "clear": true
       },
       "problemMatcher": []
     }

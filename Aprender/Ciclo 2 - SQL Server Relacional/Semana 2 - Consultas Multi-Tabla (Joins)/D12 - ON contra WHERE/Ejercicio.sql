@@ -1,0 +1,11 @@
+-- D12 - 8 ejercicios
+USE C2D12;
+-- 1. Lista clientes y pedidos con LEFT JOIN.
+-- 2. Filtra Estado='Pagado' dentro de ON.
+-- 3. Mueve el filtro a WHERE y compara.
+-- 4. Conserva a Marta aunque no tenga pedidos pagados.
+-- 5. Encuentra clientes con pedidos pendientes.
+-- 6. Cuenta pedidos pagados por cliente.
+-- 7. Compara ON, WHERE y WHERE ... OR IS NULL.
+-- 8. Explica cuándo un WHERE transforma LEFT JOIN en INNER JOIN.
+-- Tu código aquí...

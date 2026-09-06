@@ -1,0 +1,11 @@
+-- D11 - 8 ejercicios
+USE C2D11;
+-- 1. Une Facturas con Detalles.
+-- 2. Añade Productos al resultado.
+-- 3. Muestra factura, fecha, producto y cantidad.
+-- 4. Calcula subtotal = Cantidad * Precio.
+-- 5. Suma subtotales por factura.
+-- 6. Suma ventas por producto.
+-- 7. Ordena productos más vendidos.
+-- 8. Explica el orden secuencial de los dos JOIN.
+-- Tu código aquí...

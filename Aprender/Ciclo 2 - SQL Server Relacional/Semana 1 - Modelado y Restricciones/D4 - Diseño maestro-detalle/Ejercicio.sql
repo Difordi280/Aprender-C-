@@ -1,0 +1,11 @@
+-- D4 - 8 ejercicios
+USE C2D4;
+-- 1. Lista Clientes y Facturas.
+-- 2. Inserta una factura para Carla.
+-- 3. Intenta una factura con cliente inexistente.
+-- 4. Cuenta facturas por cliente.
+-- 5. Calcula el total facturado por cliente.
+-- 6. Busca clientes sin facturas usando LEFT JOIN.
+-- 7. Diseña DetallesFactura como segundo nivel N.
+-- 8. Explica por qué IdCliente vive en Facturas.
+-- Tu código aquí...

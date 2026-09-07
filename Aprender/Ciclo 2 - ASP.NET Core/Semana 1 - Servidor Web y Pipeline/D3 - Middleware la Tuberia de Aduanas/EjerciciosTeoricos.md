@@ -1,5 +1,7 @@
 # D3 - Ejercicios Teóricos 📝
 
+> ✅ **EVALUADO** — Respuestas revisadas: 1-4 correctas, 5 orden correcto pero justificación mal, 6 incorrecta.
+
 ---
 
 **1. ¿Qué es el middleware en una frase?**

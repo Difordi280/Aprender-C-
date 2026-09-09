@@ -1,0 +1,11 @@
+-- D10 - 8 ejercicios
+USE C2D10;
+-- 1. Usa alias c y p.
+-- 2. Selecciona c.Nombre y p.Nombre.
+-- 3. Une por Ciudad.
+-- 4. Corrige una columna ambigua Id.
+-- 5. Renombra las columnas de salida con AS.
+-- 6. Usa alias de tabla con INNER JOIN.
+-- 7. Agrega una tercera tabla y conserva alias claros.
+-- 8. Reescribe una consulta larga usando alias de una letra.
+-- Tu código aquí...

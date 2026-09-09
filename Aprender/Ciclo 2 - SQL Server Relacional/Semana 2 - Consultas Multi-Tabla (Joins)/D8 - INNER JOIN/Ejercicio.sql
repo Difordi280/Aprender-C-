@@ -1,0 +1,11 @@
+-- D8 - 8 ejercicios
+USE C2D8;
+-- 1. Une Clientes y Facturas por IdCliente.
+-- 2. Selecciona nombre, factura y total.
+-- 3. Comprueba que Marta desaparece.
+-- 4. Añade una factura para Marta.
+-- 5. Filtra facturas mayores que 250.
+-- 6. Ordena por total descendente.
+-- 7. Cuenta facturas por cliente.
+-- 8. Explica por qué INNER JOIN es exclusivo.
+-- Tu código aquí...

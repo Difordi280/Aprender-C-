@@ -1,0 +1,11 @@
+-- D9 - 8 ejercicios
+USE C2D9;
+-- 1. Lista todos los clientes con LEFT JOIN.
+-- 2. Encuentra clientes sin factura con IS NULL.
+-- 3. Compara el resultado con INNER JOIN.
+-- 4. Cuenta facturas por cliente sin perder a Marta.
+-- 5. Usa COALESCE para mostrar 0 en lugar de NULL.
+-- 6. Añade una factura y repite.
+-- 7. Encuentra facturas que no correspondan a un cliente (explica por qué la FK lo impide).
+-- 8. Escribe un reporte de clientes activos aunque no hayan comprado.
+-- Tu código aquí...

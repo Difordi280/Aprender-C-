@@ -2,6 +2,7 @@
 USE C2D2;
 -- 1. Lista categorías y productos.
 
+
 SELECT * FROM Categorias;
 
 SELECT * FROM Productos;
@@ -63,4 +64,4 @@ FOREIGN KEY (IdMArca) REFERENCES Marcas(IdMArca);
 SELECT * FROM Productos;
 
 
--- Tu código aquí...
+
